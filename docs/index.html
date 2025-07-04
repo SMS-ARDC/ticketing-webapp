@@ -75,7 +75,7 @@ body {
 	 </div>
 
       <div class="mb-3">
-        <label for="campus" class="form-label">Campus</label>
+        <label for="campus" class="form-label">Campus<span class="text-danger">*</span></label>
         <select class="form-select" id="campus" required>
           <option value="">Select campus</option>
           <option value="Minglanilla">Adlas</option>
@@ -86,7 +86,7 @@ body {
       </div>
 
 	<div class="mb-3">
-	  <label for="category" class="form-label">Issue Category</label>
+	  <label for="category" class="form-label">Issue Category<span class="text-danger">*</span></label>
 	  <select class="form-select" id="category" required>
 	    <option value="" disabled selected>Select category</option>
 	    <option title="Issues related to IT, computers, network, software, or systems">Technical Concerns & Requests</option>
@@ -96,12 +96,12 @@ body {
 	</div>
 
       <div class="mb-3">
-        <label for="issue" class="form-label">Issue</label>
+        <label for="issue" class="form-label">Issue<span class="text-danger">*</span></label>
         <input type="text" class="form-control" id="issue" placeholder="Short description of your concern">
       </div>
 
       <div class="mb-3">
-        <label for="description" class="form-label">Issue description</label>
+        <label for="description" class="form-label">Issue description<span class="text-danger">*</span></label>
         <textarea class="form-control" id="description" rows="3" placeholder="Provide necessary details" required></textarea>
       </div>
 
@@ -120,7 +120,7 @@ body {
       </div>
 
       <div class="mb-3">
-        <label class="form-label">Screenshots</label>
+        <label class="form-label">Screenshots<span class="text-danger">*</span></label>
         <input type="file" class="form-control" id="screenshots" accept="image/*">
       </div>
 
