@@ -171,5 +171,23 @@ body {
     </div>
   </div>
 </div>
+
+<!--Script-->
+<script>
+document.getElementById('ticketForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // prevent default submission for now
+
+  if (this.checkValidity()) {
+    const submissionModal = new bootstrap.Modal(document.getElementById('submissionModal'));
+    submissionModal.show();
+
+    // Optionally reset the form
+    // this.reset();
+  } else {
+    this.reportValidity(); // trigger browser validation messages
+  }
+});
+</script>
+
 </body>
 </html>
