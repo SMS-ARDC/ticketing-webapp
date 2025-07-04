@@ -29,7 +29,7 @@ body {
 
 /* Muted placeholders */
 ::placeholder {
-  color: #6c757d !important; /* Bootstrap muted grey */
+  color: #6c757d !important;
   opacity: 1;
 }
 </style>
@@ -42,102 +42,109 @@ body {
       <img src="logo.png" alt="ARDC Logo" class="header-logo mb-2">
       <h3 class="brand-header">OneSMS Support Ticketing System</h3>
       <p>This web app is designed to streamline the reporting and tracking of issues within our campuses under the support and scope of ARDC. Please provide as much detail as possible to ensure efficient handling and resolution.</p>
-
-	    <hr style="border-top: 1px solid #dee2e6; opacity: 0.6;" class="my-4">
+      <hr style="border-top: 1px solid #dee2e6; opacity: 0.6;" class="my-4">
     </div>
 
-    <form>
-   <div class="mb-4">
+    <form id="ticketForm" novalidate>
+      <div class="mb-4">
 
 <div class="alert alert-light border mb-4 small">
-  <strong class="text-danger">NOTICE:</strong> This system is managed by <strong>The Sisters of Mary Schools - Philippines </strong> and is intended for the exclusive use of <strong> The Sisters, Faculty, Students, and Staff</strong>.  
-  By proceeding, you agree to our 
-  <a href="https://www.thesistersofmaryschools.org/terms-of-use" class="text-decoration-none" target="_blank" rel="noopener"> Acceptable Terms of Use</a>.
+  <strong class="text-danger">NOTICE:</strong> This system is managed by <strong>The Sisters of Mary Schools - Philippines</strong> and is intended for the exclusive use of <strong>The Sisters, Faculty, Students, and Staff</strong>.
+  By proceeding, you agree to our
+  <a href="https://www.thesistersofmaryschools.org/terms-of-use" class="text-decoration-none" target="_blank" rel="noopener">Acceptable Terms of Use</a>.
 </div>
 
-	   <h6 class="fw-bold mb-3">Your Contact Information</h6>
-	   
-	  <div class="mb-3">
-	     <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
-	     <input type="text" class="form-control" id="fullName" placeholder="Aloysius Philip Schwartz" required>
-	   </div>
-	  
-	  <div class="mb-3">
-	      <label for="contactNumber" class="form-label">Contact Number <span class="text-danger">*</span></label>
-	      <input type="tel" class="form-control" id="contactNumber" placeholder="+63 919 123 4567" required>
-	   </div>
+<h6 class="fw-bold mb-3">Your Contact Information</h6>
 
-	   <div class="mb-3">
-	      <label for="schoolEmail" class="form-label">OneSMS Email Address <span class="text-danger">*</span></label>
-	      <input type="email" class="form-control" id="schoolEmail" placeholder="name@onesms.org" required>
-	    </div>
+<div class="mb-3">
+  <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+  <input type="text" class="form-control" id="fullName" placeholder="Aloysius Philip Schwartz" required>
+  <div class="invalid-feedback">Please enter your full name.</div>
+</div>
 
-	    <div class="mb-1">
-	      <label for="personalEmail" class="form-label">Personal Email Address <span class="text-danger">*</span></label>
-	      <input type="email" class="form-control" id="personalEmail" placeholder="you@example.com" required>
-	    </div>
-	    <div class="form-text fst-italic small text-muted">
-	      Your personal email will only be used to contact you for password reset requests.
-	    </div>
-	 </div>
+<div class="mb-3">
+  <label for="contactNumber" class="form-label">Contact Number <span class="text-danger">*</span></label>
+  <input type="tel" class="form-control" id="contactNumber" placeholder="+63 919 123 4567" required>
+  <div class="invalid-feedback">Please enter your contact number.</div>
+</div>
 
-      <div class="mb-3">
-        <label for="campus" class="form-label">Campus<span class="text-danger">*</span></label>
-        <select class="form-select" id="campus" required>
-          <option value="">Select campus</option>
-          <option value="Minglanilla">Adlas</option>
-          <option value="Adlas">Biga</option>
-          <option value="Boystown">Minglanilla</option>
-		  <option value="Boystown">Talisay</option>
-        </select>
-      </div>
+<div class="mb-3">
+  <label for="schoolEmail" class="form-label">OneSMS Email Address <span class="text-danger">*</span></label>
+  <input type="email" class="form-control" id="schoolEmail" placeholder="name@onesms.org" required>
+  <div class="invalid-feedback">Please enter your OneSMS email address.</div>
+</div>
 
-	<div class="mb-3">
-	  <label for="category" class="form-label">Issue Category<span class="text-danger">*</span></label>
-	  <select class="form-select" id="category" required>
-	    <option value="" disabled selected>Select category</option>
-	    <option title="Issues related to IT, computers, network, software, or systems">Technical Concerns & Requests</option>
-	    <option title="Facilities and maintenance concerns like rooms, lighting, plumbing">Facilities</option>
-	    <option title="Operational, academic or administrative concerns not covered above">Operations</option>
-	  </select>
-	</div>
+<div class="mb-1">
+  <label for="personalEmail" class="form-label">Personal Email Address <span class="text-danger">*</span></label>
+  <input type="email" class="form-control" id="personalEmail" placeholder="you@example.com" required>
+  <div class="invalid-feedback">Please enter your personal email address.</div>
+</div>
+<div class="form-text fst-italic small text-muted">
+  Your personal email will only be used to contact you for password reset requests.
+</div>
+</div>
 
-      <div class="mb-3">
-        <label for="issue" class="form-label">Issue<span class="text-danger">*</span></label>
-        <input type="text" class="form-control" id="issue" placeholder="Short description of your concern"required>
-      </div>
+<div class="mb-3">
+  <label for="campus" class="form-label">Campus<span class="text-danger">*</span></label>
+  <select class="form-select" id="campus" required>
+    <option value="">Select campus</option>
+    <option value="Adlas">Adlas</option>
+    <option value="Biga">Biga</option>
+    <option value="Minglanilla">Minglanilla</option>
+    <option value="Talisay">Talisay</option>
+  </select>
+  <div class="invalid-feedback">Please select your campus.</div>
+</div>
 
-      <div class="mb-3">
-        <label for="description" class="form-label">Issue description<span class="text-danger">*</span></label>
-        <textarea class="form-control" id="description" rows="3" placeholder="Provide necessary details" required></textarea>
-      </div>
+<div class="mb-3">
+  <label for="category" class="form-label">Issue Category<span class="text-danger">*</span></label>
+  <select class="form-select" id="category" required>
+    <option value="" disabled selected>Select category</option>
+    <option>Technical Concerns & Requests</option>
+    <option>Facilities</option>
+    <option>Operations</option>
+  </select>
+  <div class="invalid-feedback">Please select an issue category.</div>
+</div>
 
-      <div class="mb-3">
-        <label for="priority" class="form-label">Priority</label>
-        <select class="form-select" id="priority">
-          <option>Normal</option>
-          <option>High</option>
-          <option>Critical</option>
-        </select>
-      </div>
+<div class="mb-3">
+  <label for="issue" class="form-label">Issue<span class="text-danger">*</span></label>
+  <input type="text" class="form-control" id="issue" placeholder="Short description of your concern" required>
+  <div class="invalid-feedback">Please enter a short description of your issue.</div>
+</div>
 
-      <div class="mb-3">
-        <label for="date" class="form-label">Date reported</label>
-        <input type="date" class="form-control" id="date">
-      </div>
+<div class="mb-3">
+  <label for="description" class="form-label">Issue description<span class="text-danger">*</span></label>
+  <textarea class="form-control" id="description" rows="3" placeholder="Provide necessary details" required></textarea>
+  <div class="invalid-feedback">Please provide more details about your issue.</div>
+</div>
 
-      <div class="mb-3">
-        <label class="form-label">Screenshots</label>
-        <input type="file" class="form-control" id="screenshots" accept="image/*">
-      </div>
+<div class="mb-3">
+  <label for="priority" class="form-label">Priority</label>
+  <select class="form-select" id="priority">
+    <option>Normal</option>
+    <option>High</option>
+    <option>Critical</option>
+  </select>
+</div>
 
-      <div class="mb-3">
-        <label class="form-label">Supporting Documents/Files</label>
-        <input type="file" class="form-control" id="files" multiple>
-      </div>
+<div class="mb-3">
+  <label for="date" class="form-label">Date reported</label>
+  <input type="date" class="form-control" id="date">
+</div>
 
-      <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#submissionModal">Submit</button>
-    </form>
+<div class="mb-3">
+  <label class="form-label">Screenshots</label>
+  <input type="file" class="form-control" id="screenshots" accept="image/*">
+</div>
+
+<div class="mb-3">
+  <label class="form-label">Supporting Documents/Files</label>
+  <input type="file" class="form-control" id="files" multiple>
+</div>
+
+<button type="submit" class="btn btn-primary w-100">Submit</button>
+</form>
   </div>
 </div>
 
@@ -162,7 +169,7 @@ body {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Thank you for submitting your request. Your submission has been received and is being attended to by the appropriate support group.  
+        Thank you for submitting your request. Your submission has been received and is being attended to by the appropriate support group.
         The ARDC Support Team may also contact you if additional information is needed.
       </div>
       <div class="modal-footer">
@@ -172,21 +179,23 @@ body {
   </div>
 </div>
 
-<!--Script-->
 <script>
-document.getElementById('ticketForm').addEventListener('submit', function(e) {
-  e.preventDefault(); // prevent default submission for now
+(() => {
+  const form = document.getElementById('ticketForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-  if (this.checkValidity()) {
-    const submissionModal = new bootstrap.Modal(document.getElementById('submissionModal'));
-    submissionModal.show();
-
-    // Optionally reset the form
-    this.reset();
-  } else {
-    this.reportValidity(); // trigger browser validation messages
-  }
-});
+    if (!form.checkValidity()) {
+      e.stopPropagation();
+      form.classList.add('was-validated');
+    } else {
+      const submissionModal = new bootstrap.Modal(document.getElementById('submissionModal'));
+      submissionModal.show();
+      form.reset();
+      form.classList.remove('was-validated');
+    }
+  }, false);
+})();
 </script>
 
 </body>
