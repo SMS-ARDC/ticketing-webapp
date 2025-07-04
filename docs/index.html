@@ -36,22 +36,32 @@
     </div>
 
     <form>
-      <div class="mb-4">
+   <div class="mb-4">
 	   <h6 class="fw-bold mb-3">Your Contact Information</h6>
+	   
+	  <div class="mb-3">
+	     <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+	     <input type="text" class="form-control" id="fullName" placeholder="Aloysius Philip Schwartz" required>
+	   </div>
+	  
+	  <div class="mb-3">
+	      <label for="contactNumber" class="form-label">Contact Number <span class="text-danger">*</span></label>
+	      <input type="tel" class="form-control" id="contactNumber" placeholder="+63 919 123 4567" required>
+	   </div>
 
 	   <div class="mb-3">
-	     <label for="schoolEmail" class="form-label">OneSMS Email address</label>
-	     <input type="email" class="form-control" id="schoolEmail" placeholder="name@onesms.org" required>
-	   </div>
+	      <label for="schoolEmail" class="form-label">OneSMS Email Address <span class="text-danger">*</span></label>
+	      <input type="email" class="form-control" id="schoolEmail" placeholder="name@onesms.org" required>
+	    </div>
 
-	  <div class="mb-3">
-	     <label for="personalEmail" class="form-label">Personal Email address</label>
-	     <input type="email" class="form-control" id="personalEmail" placeholder="you@example.com" required>
-	     <div class="form-text fst-italic small text-muted">
-	       Your personal email will only be used to contact you for password reset requests.
-	     </div>
-	   </div>
-	</div>
+	    <div class="mb-1">
+	      <label for="personalEmail" class="form-label">Personal Email Address <span class="text-danger">*</span></label>
+	      <input type="email" class="form-control" id="personalEmail" placeholder="you@example.com" required>
+	    </div>
+	    <div class="form-text fst-italic small text-muted">
+	      Your personal email will only be used to contact you for password reset requests.
+	    </div>
+	 </div>
 
       <div class="mb-3">
         <label for="campus" class="form-label">Campus</label>
