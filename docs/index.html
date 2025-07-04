@@ -136,7 +136,7 @@ body {
         <input type="file" class="form-control" id="files" multiple>
       </div>
 
-      <button type="submit" class="btn btn-primary w-100">Submit</button>
+      <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#submissionModal">Submit</button>
     </form>
   </div>
 </div>
@@ -152,5 +152,24 @@ body {
     </p>
   </div>
 </footer>
+
+<!-- Submission Confirmation Modal -->
+<div class="modal fade" id="submissionModal" tabindex="-1" aria-labelledby="submissionModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="submissionModalLabel">Submission Received</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Thank you for submitting your request. Your submission has been received and is being attended to by the appropriate support group.  
+        The ARDC Support Team may also contact you if additional information is needed.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
