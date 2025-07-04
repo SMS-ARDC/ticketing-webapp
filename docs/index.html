@@ -36,10 +36,22 @@
     </div>
 
     <form>
-      <div class="mb-3">
-        <label for="reporter" class="form-label">Issue reported by</label>
-        <input type="text" class="form-control" id="reporter" placeholder="Enter your OneSMS email address" required>
-      </div>
+      <div class="mb-4">
+	   <h6 class="fw-bold mb-3">Your Contact Information</h6>
+
+	   <div class="mb-3">
+	     <label for="schoolEmail" class="form-label">OneSMS Email address</label>
+	     <input type="email" class="form-control" id="schoolEmail" placeholder="name@onesms.edu.ph" required>
+	   </div>
+
+	   <div class="mb-1">
+	     <label for="personalEmail" class="form-label">Personal Email address</label>
+	     <input type="email" class="form-control" id="personalEmail" placeholder="you@example.com" required>
+	   </div>
+	   <div class="form-text mb-2">
+	     Your personal email will only be used to contact you for password reset requests.
+	   </div>
+	</div>
 
       <div class="mb-3">
         <label for="campus" class="form-label">Campus</label>
